@@ -12,7 +12,7 @@ class Place(models.Model):
     features = models.ManyToManyField(Feature)
     comments = models.ManyToManyField(Comment)
     reviews = models.ManyToManyField(Review)
-    location = models.ForeignKey(Location, on_delete=models.CASCADE)
+    location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.name
