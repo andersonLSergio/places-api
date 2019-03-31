@@ -4,7 +4,6 @@ from comments.models import Comment
 from reviews.models import Review
 from location.models import Location
 
-# Create your models here.
 class Place(models.Model):
     name = models.CharField(max_length=150)
     description = models.TextField()
